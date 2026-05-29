@@ -124,6 +124,23 @@ const navItems = [
 			</div>
 		</footer>
 
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Tìm nút 3 gạch và khung Menu di động bằng ID hoặc Class
+    // (Bảo các em kiểm tra xem nút 3 gạch đã đặt id là "menu-btn" và khung menu là "mobile-menu" chưa nhé)
+    const menuBtn = document.getElementById('menu-btn') || document.querySelector('[data-menu-button]');
+    const mobileMenu = document.getElementById('mobile-menu') || document.querySelector('[data-mobile-menu]');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        // Tự động bật/tắt class "hidden" (ẩn/hiện) của Tailwind khi bấm nút
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
+
 	</body>
 </html>
 
