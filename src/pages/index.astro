@@ -1,11 +1,194 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const conferenceTheme = "AI Applications in Economics and Business towards a Sustainable Future";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Home - AI4Econ&Biz 2026">
+  <main class="bg-slate-50 font-sans text-slate-900 cursor-default">
+    
+    <section class="relative bg-gradient-to-br from-blue-950 via-slate-900 to-blue-900 py-20 px-6 text-center text-white overflow-hidden border-b-4 border-orange-500">
+      <div class="max-w-5xl mx-auto relative z-10">
+        <span class="bg-orange-500 text-white text-xs font-bold tracking-widest px-4 py-1.5 rounded-full uppercase shadow-sm">
+          Conference
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black mt-5 mb-4 tracking-tight leading-tight text-white">
+          WELCOME TO AI4Econ&Biz 2026
+        </h1>
+        <p class="text-lg md:text-xl font-bold text-orange-400 mb-6 tracking-wide uppercase max-w-4xl mx-auto leading-snug">
+          "{conferenceTheme}"
+        </p>
+        
+        <p class="text-sm md:text-base max-w-4xl mx-auto text-slate-300 font-light leading-relaxed mb-8">
+          Artificial Intelligence (AI) is rapidly reshaping the global economy and business landscapes. Initiated in 2026, AI4Econ&Biz aims to become an annual event series hosted by Foreign Trade University (FTU) in collaboration with FISU Vietnam. In its inaugural year, the program focuses on three core pillars: a Scientific Conference on AI applications in economics, business, and advanced technology towards a sustainable future; an AI Challenge fostering innovation for students; and an Industrial Show driving strategic networking and technology transfer for the business community.
+        </p>
+
+<div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-2 max-w-4xl mx-auto my-6 flex flex-col lg:flex-row items-stretch justify-between gap-4 text-left">
+          
+          <div class="flex flex-col sm:flex-row items-center gap-x-8 gap-y-3 p-4 flex-1 justify-center lg:justify-start">
+            
+            <div class="space-y-0.5 text-center sm:text-left shrink-0">
+              <span class="block text-[10px] font-bold text-orange-400 uppercase tracking-widest">Date</span>
+              <span class="text-xl md:text-2xl font-black text-white tracking-tight block">
+                August 28, 2026
+              </span>
+            </div>
+            
+            <div class="h-10 w-[1px] bg-white/10 hidden sm:block"></div>
+            
+            <div class="space-y-0.5 text-center sm:text-left">
+              <span class="block text-[10px] font-bold text-orange-400 uppercase tracking-widest">Venue</span>
+              <span class="text-base font-black text-white tracking-tight block leading-tight">
+                Foreign Trade University (FTU)
+              </span>
+              <span class="text-xs text-slate-300 block leading-normal font-medium">
+                91 Chua Lang, Dong Da, Hanoi
+              </span>
+            </div>
+            
+          </div>
+
+          <div class="flex items-center gap-2 w-full lg:w-auto p-2 shrink-0 border-t lg:border-t-0 lg:border-l border-white/10">
+            <a 
+              href="/call-for-papers" 
+              class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider text-center flex-1 lg:flex-initial transition-all shadow-md hover:-translate-y-0.5"
+            >
+              Call for Papers
+            </a>
+            <a 
+              href="#important-dates" 
+              class="bg-white/10 hover:bg-white/20 text-white font-semibold px-5 py-3 rounded-xl text-xs uppercase tracking-wider text-center flex-1 lg:flex-initial transition-all border border-white/10"
+            >
+              Important Dates
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="absolute top-0 left-0 w-full h-full opacity-5 bg-[url('https://www.transparenttextures.com/patterns/grid-me.png')]"></div>
+    </section>
+
+    <section id="about-ftu" class="max-w-7xl mx-auto py-20 px-6 sm:px-8 lg:px-12 bg-white my-12 rounded-2xl shadow-sm border border-slate-100">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="h-1 w-8 bg-orange-500 rounded-full"></span>
+            <span class="text-blue-600 font-bold text-sm uppercase tracking-wider">Organizer & Host</span>
+          </div>
+          <h2 class="text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">
+            Foreign Trade University (FTU)
+          </h2>
+          <div class="text-slate-600 space-y-5 text-justify leading-relaxed text-sm md:text-base">
+            <p>
+              Established in 1960, Foreign Trade University (FTU) is widely recognized as one of the most prestigious and top-tier universities in Vietnam. Specializing in economics, international business, management, and tech-driven economic models, FTU stands at the forefront of academic excellence and educational transformation.
+            </p>
+            <p>
+              With a firm vision towards deep global integration and innovative scientific research, FTU serves as an elite hub for cultivating top-quality human resources. In 2026, by hosting the <strong>AI4Econ&Biz</strong> conference alongside <strong>FISU Vietnam</strong>, FTU continues to pioneer the integration of Artificial Intelligence within business domains, bridging academic insight with practical industrial application.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur opacity-15 group-hover:opacity-25 transition duration-500"></div>
+          <div class="relative bg-slate-50 p-3 rounded-2xl border border-slate-100 shadow-lg overflow-hidden aspect-[4/3]">
+            <img 
+              src="/images/ftu-campus.webp" 
+              alt="Foreign Trade University Campus" 
+              class="w-full h-full object-cover rounded-xl bg-slate-100 transition-transform duration-700 group-hover:scale-105"
+              onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1000';" 
+            />
+          </div>
+          <p class="text-xs text-center text-slate-400 mt-3 italic">Foreign Trade University Campus — Hanoi, Vietnam</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="important-dates" class="max-w-5xl mx-auto py-16 px-6 sm:px-8 border-t border-slate-200">
+      <div class="text-center mb-12">
+        <span class="text-orange-600 font-bold text-sm uppercase tracking-widest bg-orange-50 px-4 py-1 rounded-full">Timeline</span>
+        <h2 class="text-3xl font-extrabold text-slate-900 mt-3 tracking-tight">Important Dates</h2>
+        <p class="text-slate-500 mt-2 text-sm">Key deadlines for authors, researchers, and participants.</p>
+      </div>
+      
+      <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden divide-y divide-slate-100">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between p-6 hover:bg-slate-50/60 transition-colors gap-4">
+          <div class="flex items-start gap-4">
+            <div class="mt-1 text-blue-600 bg-blue-50 p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-800 text-base md:text-lg">Full Paper Submission Deadline</h3>
+            </div>
+          </div>
+          <div class="flex items-center gap-6 justify-between sm:justify-end">
+            <span class="font-bold text-slate-700 text-right text-base min-w-[180px]">June 15, 2026</span>
+            <span class="text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider text-center w-32 bg-green-100 text-green-700">Open</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between p-6 hover:bg-slate-50/60 transition-colors gap-4">
+          <div class="flex items-start gap-4">
+            <div class="mt-1 text-blue-600 bg-blue-50 p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-800 text-base md:text-lg">Notification of Acceptance</h3>
+            </div>
+          </div>
+          <div class="flex items-center gap-6 justify-between sm:justify-end">
+            <span class="font-bold text-slate-700 text-right text-base min-w-[180px]">July 2026</span>
+            <span class="text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider text-center w-32 bg-slate-100 text-slate-500">Upcoming</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between p-6 hover:bg-slate-50/60 transition-colors gap-4">
+          <div class="flex items-start gap-4">
+            <div class="mt-1 text-blue-600 bg-blue-50 p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-800 text-base md:text-lg">Main Conference Date</h3>
+            </div>
+          </div>
+          <div class="flex items-center gap-6 justify-between sm:justify-end">
+            <span class="font-bold text-slate-700 text-right text-base min-w-[180px]">August 28, 2026</span>
+            <span class="text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider text-center w-32 bg-orange-100 text-orange-700">Main Event</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-100 py-16 px-6 border-t border-slate-200">
+      <div class="max-w-6xl mx-auto">
+        <p class="text-xs uppercase tracking-widest font-bold text-slate-400 text-center mb-8">Hosted & Co-Organized by</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
+          <a href="https://www.ftu.edu.vn/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-200/60 hover:border-blue-400 hover:shadow-md transition-all group cursor-pointer">
+            <img src="/logos/ftu-logo.png" alt="FTU Logo" class="h-14 w-auto object-contain shrink-0" />
+            <div class="flex flex-col">
+              <span class="text-xs font-bold text-blue-600 uppercase tracking-wider group-hover:text-blue-700">Host Institution</span>
+              <span class="text-sm font-semibold text-slate-800 group-hover:text-slate-900">Foreign Trade University (FTU)</span>
+            </div>
+          </a>
+
+          <a href="http://fisu.vn/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-200/60 hover:border-indigo-400 hover:shadow-md transition-all group cursor-pointer">
+            <img src="/logos/fisu-logo.png" alt="FISU Logo" class="h-14 w-auto object-contain shrink-0" onerror="this.src='/logos/ftu-logo.png'; this.style.opacity='0.3';" />
+            <div class="flex flex-col">
+              <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider group-hover:text-indigo-700">Co-Organizer</span>
+              <span class="text-sm font-semibold text-slate-800 group-hover:text-slate-900">FISU Vietnam</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 </Layout>

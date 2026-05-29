@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// DANH SÁCH CHỦ ĐỀ NGHIÊN CỨU TRÍCH XUẤT CHÍNH XÁC TỪ FILE DOCX
+const topicsOfInterest = [
+  {
+    domain: "Domain 1: Economics & Management",
+    items: [
+      "AI in Trade & Investment: Analyzing international trade/investment data, risk & fraud prevention, recommendation systems, dynamic pricing, customer behavior analysis, virtual assistants, and new digital business models.",
+      "AI in Finance & Fintech: Credit scoring, financial fraud detection, and integration solutions between Blockchain and AI.",
+      "AI in Economic Management: Economic forecasting, policy orientation, formulation, and implementation solutions."
+    ]
+  },
+  {
+    domain: "Domain 2: Corporate Governance & Operations",
+    items: [
+      "AI in Corporate Governance: Decision-support systems, business strategy formulation, resource analysis, and performance evaluation.",
+      "AI in Logistics & Supply Chain: Route optimization, warehouse automation, digital twins application, and smart operational solutions."
+    ]
+  },
+  {
+    domain: "Domain 3: Social, Ethical & Sustainable Development Issues",
+    items: [
+      "Social Issues: Impact of AI on employment, labor productivity, training, and retraining requirements.",
+      "Ethical Issues: AI governance, data privacy, and legal regulations for AI in economics and business.",
+      "Sustainable Development: Energy transition, emission reduction, green economy, and circular economy."
+    ]
+  },
+  {
+    domain: "Domain 4: Advanced Technology",
+    items: [
+      "AI Platforms & Systems Architecture: Optimization of foundational models, MLOps systems, fine-tuning techniques, and big data processing.",
+      "AI Security & Sustainability: System security and data attack prevention.",
+      "Advanced AI Technologies: Intensive algorithms for Natural Language Processing (NLP), Computer Vision, and explainable AI (XAI)."
+    ]
+  }
+];
+---
+
+<Layout title="Call for Papers - AI4Econ&Biz 2026">
+  <main class="bg-slate-50 font-sans text-slate-900 cursor-default py-10 min-h-screen">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      
+      <div class="border-b-2 border-orange-500 pb-3 mb-6">
+        <h1 class="text-2xl font-black text-blue-950 uppercase tracking-tight">
+          Call for Papers
+        </h1>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm mb-6 text-sm text-slate-600 text-justify leading-relaxed">
+        <p>
+          The National Scientific Conference <strong>AI4Econ&Biz 2026</strong>, themed <em>“AI Applications in Economics and Business towards a Sustainable Future,”</em> serves as an academic platform for policymakers, researchers, and corporate communities to exchange deep insights and discuss effective, responsible AI adoption. We cordially invite academic scientists, researchers, and experts to submit their research papers to the conference.
+        </p>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-6">
+        <div>
+          <h2 class="text-xs font-bold text-orange-600 uppercase tracking-widest mb-4 pb-1 border-b border-slate-100">
+            Topics of Interest
+          </h2>
+          <p class="text-xs text-slate-400 mb-4 italic">We welcome submissions including, but not limited to, the following domains:</p>
+        </div>
+
+        <div class="space-y-6">
+          {topicsOfInterest.map((domain) => (
+            <div class="space-y-2">
+              <h3 class="text-xs font-bold text-blue-950 uppercase tracking-wide flex items-center gap-2">
+                <span class="w-1 h-3 bg-blue-600 rounded-full inline-block"></span>
+                {domain.domain}
+              </h3>
+              <ul class="space-y-1.5 pl-3">
+                {domain.items.map((item) => (
+                  <li class="text-xs text-slate-600 leading-relaxed text-justify list-none flex items-start gap-2">
+                    <span class="text-orange-500 shrink-0 select-none">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </main>
+</Layout>

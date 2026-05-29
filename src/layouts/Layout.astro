@@ -1,23 +1,135 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+// Lấy đường dẫn hiện tại để xác định tab nào đang active
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
+
+// Danh sách các tab và đường dẫn
+const navItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Committee', href: '/committee' },
+  { name: 'Keynote Speakers', href: '/speakers' },
+  { name: 'Call For Papers', href: '/call-for-papers' },
+  { name: 'For Attendees', href: '/for-attendees' },
+  { name: 'History', href: '/history' },
+  { name: 'Contact Us', href: '/contact' },
+];
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="AI4Econ&Biz 2026 - International Conference" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-white font-['Inter',_sans-serif] text-slate-900">
+		
+		<header class="bg-white border-b border-slate-100 sticky top-0 z-50 shadow-sm">
+			<div class="max-w-[1440px] mx-auto px-4 lg:px-8">
+				
+				<div class="flex items-center justify-between h-24">
+					
+					<div class="flex items-center gap-6">
+						<div class="flex items-center gap-3 pr-6 border-r border-slate-200">
+							<img src="/logos/ftu-logo.png" alt="FTU Logo" class="h-12 w-auto object-contain" />
+							<img src="/logos/fisu-logo.png" alt="World Bank" class="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+							<img src="http://googleusercontent.com/image_collection/image_retrieval/8440935771441729817" alt="ADB" class="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+							<img src="http://googleusercontent.com/image_collection/image_retrieval/4783649492675403757" alt="IMF" class="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+						</div>
+						
+						<div class="flex flex-col">
+							<span class="text-blue-950 font-black text-xl tracking-tighter leading-none">AI4Econ&Biz</span>
+							<span class="text-orange-600 font-bold text-lg leading-none">2026</span>
+						</div>
+					</div>
+
+						<nav class="hidden xl:flex items-center gap-1">
+						{navItems.map((item) => {
+							const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
+							
+							// Tìm đến vị trí History để chèn 2 nút bấm đặc biệt vào trước nó
+							if (item.name === 'History') {
+							return (
+								<>
+								{/* Nút 1: AI Challenge (Màu Cam) */}
+								<a 
+									href="/ai-challenge" 
+									class="mx-1 bg-orange-600 hover:bg-orange-700 text-white px-4 py-2.5 rounded-full text-xs font-bold shadow-sm transition-all hover:scale-105 active:scale-95"
+								>
+									AI CHALLENGE
+								</a>
+
+								{/* Nút 2: Industrial Show (Màu Indigo - Mới) */}
+								<a 
+									href="/industrial-show" 
+									class="mx-1 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-full text-xs font-bold shadow-sm transition-all hover:scale-105 active:scale-95"
+								>
+									INDUSTRIAL SHOW
+								</a>
+								
+								{/* Tab History bình thường */}
+								<a 
+									href={item.href} 
+									class={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 hover:text-blue-700 ${isActive ? 'text-blue-900' : 'text-slate-500'}`}
+								>
+									{item.name}
+									{isActive && <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-orange-500 rounded-full"></span>}
+								</a>
+								</>
+							);
+							}
+
+							return (
+							<a 
+								href={item.href} 
+								class={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 hover:text-blue-700 ${isActive ? 'text-blue-900' : 'text-slate-500'}`}
+							>
+								{item.name}
+								{isActive && <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-orange-500 rounded-full"></span>}
+							</a>
+							);
+						})}
+						</nav>
+
+					<button class="xl:hidden text-slate-900">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</header>
+
 		<slot />
+
+		<footer class="bg-blue-950 text-white py-12 px-6">
+			<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-blue-900 pt-12">
+				<div>
+					<h3 class="text-xl font-bold mb-4">AI4Econ&Biz 2026</h3>
+					<p class="text-blue-200 text-sm max-w-md">Bridging Artificial Intelligence with Global Economic Excellence. Organized by Foreign Trade University and Partners.</p>
+				</div>
+				<div class="text-right">
+					<p class="text-sm text-blue-300">© 2026 Foreign Trade University. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+<style is:global>
+	/* Hiệu ứng mượt mà khi di chuyển chuột */
+	.nav-underline-anim {
+		@apply transition-all duration-300;
 	}
 </style>

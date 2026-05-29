@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// HỆ THỐNG DỮ LIỆU BAN TỔ CHỨC (Sinh viên chỉnh sửa tại đây)
+const committees = [
+  {
+    category: "General Chair",
+    members: [
+      { name: "Prof. Dr. [Representative of FTU]", institution: "Foreign Trade University (FTU)", role: "General Chair" }
+    ]
+  },
+  {
+    category: "General Co-Chairs",
+    members: [
+      { name: "Assoc. Prof. Dr. [Representative of FISU]", institution: "FISU Vietnam", role: "General Co-Chair" },
+      { name: "Prof. Dr. [International Partner]", institution: "Partner Institution", role: "General Co-Chair" }
+    ]
+  },
+  {
+    category: "Steering Committee",
+    members: [
+      { name: "Dr. [Steering Member One]", institution: "Foreign Trade University (FTU)", role: "Steering Committee" },
+      { name: "Dr. [Steering Member Two]", institution: "FISU Vietnam", role: "Steering Committee" },
+      { name: "Prof. Dr. [Steering Member Three]", institution: "Advisory Board", role: "Steering Committee" }
+    ]
+  },
+  {
+    category: "Organizing Committee",
+    members: [
+      { name: "Assoc. Prof. Dr. [Organizer One]", institution: "Foreign Trade University (FTU)", role: "Organizing Chair" },
+      { name: "Dr. [Organizer Two]", institution: "Foreign Trade University (FTU)", role: "Secretariat" },
+      { name: "MSc. [Organizer Three]", institution: "Foreign Trade University (FTU)", role: "Logistics" },
+      { name: "Dr. [Organizer Four]", institution: "FISU Vietnam", role: "Committee Member" }
+    ]
+  },
+  {
+    category: "Program Chairs",
+    members: [
+      { name: "Dr. [Program Chair One]", institution: "Foreign Trade University (FTU)", role: "Program Chair" },
+      { name: "Assoc. Prof. Dr. [Program Chair Two]", institution: "FISU Vietnam", role: "Program Co-Chair" }
+    ]
+  },
+  {
+    category: "Finance Chairs",
+    members: [
+      { name: "MSc. [Finance Chair One]", institution: "Foreign Trade University (FTU)", role: "Finance Chair" },
+      { name: "Dr. [Finance Chair Two]", institution: "Foreign Trade University (FTU)", role: "Finance Co-Chair" }
+    ]
+  },
+  {
+    category: "Technical Program Committee (TPC)",
+    members: [
+      { name: "Dr. [Reviewer One]", institution: "Foreign Trade University (FTU)", role: "TPC Member" },
+      { name: "Dr. [Reviewer Two]", institution: "FISU Vietnam", role: "TPC Member" },
+      { name: "Dr. [Reviewer Three]", institution: "National University", role: "TPC Member" },
+      { name: "Dr. [Reviewer Four]", institution: "International Institution", role: "TPC Member" },
+      { name: "Dr. [Reviewer Five]", institution: "Corporate AI Lab", role: "TPC Member" }
+    ]
+  }
+];
+---
+
+<Layout title="Committee - AI4Econ&Biz 2026">
+  <main class="bg-slate-50 font-sans text-slate-900 cursor-default py-10 min-h-screen">
+    
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      
+      <!-- TIÊU ĐỀ CHÍNH ĐẨY LÊN ĐẦU TRANG, GỌN GÀNG -->
+      <div class="border-b-2 border-orange-500 pb-4 mb-8">
+        <h1 class="text-2xl md:text-3xl font-black text-blue-950 uppercase tracking-tight">
+          Conference Committee
+        </h1>
+      </div>
+
+      <!-- DANH SÁCH BAN TỔ CHỨC DẠNG DÒNG (FLEX) SIÊU NGẮN -->
+      <div class="space-y-6">
+        {committees.map((group) => (
+          <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col md:flex-row md:items-start gap-4">
+            
+            <!-- Tên nhóm chức danh (Bên trái) -->
+            <div class="md:w-1/4 shrink-0 border-b md:border-b-0 md:border-r border-slate-100 pb-2 md:pb-0 md:pr-4">
+              <h2 class="text-xs font-bold text-orange-600 uppercase tracking-wider">
+                {group.category}
+              </h2>
+            </div>
+
+            <!-- Danh sách nhân sự xếp thành hàng/khối nhỏ (Bên phải) -->
+            <div class="md:w-3/4 flex flex-wrap gap-2">
+              {group.members.map((member) => (
+                <div class="bg-slate-50 border border-slate-200/60 rounded-lg px-3 py-1.5 text-xs flex flex-col sm:flex-row sm:items-center gap-1 hover:border-blue-400 transition-colors">
+                  <span class="font-bold text-slate-800">{member.name}</span>
+                  <span class="text-slate-400 hidden sm:inline">|</span>
+                  <span class="text-slate-500 font-medium italic text-[11px]">{member.institution}</span>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        ))}
+      </div>
+
+    </div>
+    
+  </main>
+</Layout>
