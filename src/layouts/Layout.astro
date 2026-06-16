@@ -8,23 +8,22 @@ const { title } = Astro.props;
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
 
-// Danh sách các tab và đường dẫn
+// Danh sách các tab và đường dẫn (ĐÃ CHUYỂN TIẾNG VIỆT, ĐỔI THÀNH THÔNG BÁO VÀ CHƯƠNG TRÌNH, BỎ HISTORY)
 const navItems = [
-  { name: 'Home', href: '/' },
-  { name: 'Committee', href: '/committee' },
-  { name: 'Keynote Speakers', href: '/speakers' },
-  { name: 'Call For Papers', href: '/call-for-papers' },
-  { name: 'For Attendees', href: '/for-attendees' },
-  { name: 'History', href: '/history' },
-  { name: 'Contact Us', href: '/contact' },
+  { name: 'Trang chủ', href: '/' },
+  { name: 'Ban tổ chức', href: '/committee' },
+  { name: 'Diễn giả chính', href: '/speakers' },
+  { name: 'Thông báo', href: '/call-for-papers' }, 
+  { name: 'Chương trình', href: '/for-attendees' },
+  { name: 'Liên hệ', href: '/contact' },
 ];
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="vi" class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="AI4Econ&Biz 2026 - International Conference" />
+        <meta name="description" content="AI4Econ&Biz 2026 - Hội thảo Khoa học Quốc gia" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,12 +38,11 @@ const navItems = [
                 
                 <div class="flex items-center justify-between h-24">
                     
-                    <div class="flex items-center gap-6">
+                    <div class="flex items-center gap-6 shrink-0">
                         <div class="flex items-center gap-3 pr-6 border-r border-slate-200">
                             <img src="/logos/ftu-logo.png" alt="FTU Logo" class="h-12 w-auto object-contain" />
-                            <img src="/logos/fisu-logo.png" alt="World Bank" class="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                            <img src="http://googleusercontent.com/image_collection/image_retrieval/8440935771441729817" alt="ADB" class="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                            <img src="http://googleusercontent.com/image_collection/image_retrieval/4783649492675403757" alt="IMF" class="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                            <img src="/logos/fisu-logo.png" alt="FISU logo" class="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                            <img src="/logos/hthvn-logo.jpg" alt="HTHVN logo" class="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" />
                         </div>
                         
                         <div class="flex flex-col">
@@ -53,45 +51,41 @@ const navItems = [
                         </div>
                     </div>
 
-                    <nav class="hidden xl:flex items-center gap-1">
+                    <nav class="hidden xl:flex items-center gap-x-2 2xl:gap-x-4">
                     {navItems.map((item) => {
                         const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
                         
-                        // Chèn các nút tính năng đặc biệt vào trước tab History
-                        if (item.name === 'History') {
+                        // Chèn 3 nút tính năng hành động nổi bật vào trước mục Liên hệ
+                        if (item.name === 'Liên hệ') {
                             return (
                                 <>
-                                {/* NÚT CHÍNH: SUBMIT PAPER (MÀU XANH ĐẬM TRANG TRỌNG) */}
                                 <a 
                                     href="/submit-paper" 
-                                    class="mx-1 bg-blue-950 hover:bg-blue-900 text-white px-4 py-2.5 rounded-full text-xs font-bold shadow-sm transition-all hover:scale-105 active:scale-95"
+                                    class="whitespace-nowrap bg-blue-950 hover:bg-blue-900 text-white px-4 py-2.5 rounded-full text-xs font-bold shadow-sm transition-all hover:scale-105 active:scale-95"
                                 >
-                                    SUBMIT PAPER
+                                    GỬI BÀI
                                 </a>
 
-                                {/* Nút: AI Challenge (Màu Cam) */}
                                 <a 
                                     href="/ai-challenge" 
-                                    class="mx-1 bg-orange-600 hover:bg-orange-700 text-white px-4 py-2.5 rounded-full text-xs font-bold shadow-sm transition-all hover:scale-105 active:scale-95"
+                                    class="whitespace-nowrap bg-orange-600 hover:bg-orange-700 text-white px-4 py-2.5 rounded-full text-xs font-bold shadow-sm transition-all hover:scale-105 active:scale-95"
                                 >
                                     AI CHALLENGE
                                 </a>
 
-                                {/* Nút: Industrial Show (Màu Indigo) */}
                                 <a 
                                     href="/industrial-show" 
-                                    class="mx-1 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-full text-xs font-bold shadow-sm transition-all hover:scale-105 active:scale-95"
+                                    class="whitespace-nowrap bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-full text-xs font-bold shadow-sm transition-all hover:scale-105 active:scale-95"
                                 >
                                     INDUSTRIAL SHOW
                                 </a>
                                 
-                                {/* Tab History bình thường */}
                                 <a 
                                     href={item.href} 
-                                    class={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 hover:text-blue-700 ${isActive ? 'text-blue-900' : 'text-slate-500'}`}
+                                    class={`whitespace-nowrap relative px-2.5 py-2 text-xs 2xl:text-sm font-semibold transition-all duration-300 hover:text-blue-700 ${isActive ? 'text-blue-900' : 'text-slate-500'}`}
                                 >
                                     {item.name}
-                                    {isActive && <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-orange-500 rounded-full"></span>}
+                                    {isActive && <span class="absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-orange-500 rounded-full"></span>}
                                 </a>
                                 </>
                             );
@@ -100,10 +94,10 @@ const navItems = [
                         return (
                             <a 
                                 href={item.href} 
-                                class={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 hover:text-blue-700 ${isActive ? 'text-blue-900' : 'text-slate-500'}`}
+                                class={`whitespace-nowrap relative px-2.5 py-2 text-xs 2xl:text-sm font-semibold transition-all duration-300 hover:text-blue-700 ${isActive ? 'text-blue-900' : 'text-slate-500'}`}
                             >
                                 {item.name}
-                                {isActive && <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-orange-500 rounded-full"></span>}
+                                {isActive && <span class="absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-orange-500 rounded-full"></span>}
                             </a>
                         );
                     })}
@@ -119,27 +113,21 @@ const navItems = [
         </header>
 
         <div id="mobile-menu" class="hidden xl:hidden fixed top-24 left-0 w-full bg-white border-b border-slate-200 shadow-lg z-40 flex flex-col p-4 space-y-2 max-h-[calc(100vh-96px)] overflow-y-auto">
+            
+            <a href="/submit-paper" class="bg-blue-950 text-white text-center py-2.5 rounded-xl text-xs font-bold shadow-sm">
+                📝 GỬI BÀI
+            </a>
+            <a href="/ai-challenge" class="bg-orange-600 text-white text-center py-2.5 rounded-xl text-xs font-bold shadow-sm">
+                AI CHALLENGE
+            </a>
+            <a href="/industrial-show" class="bg-indigo-600 text-white text-center py-2.5 rounded-xl text-xs font-bold shadow-sm">
+                INDUSTRIAL SHOW
+            </a>
+            
+            <hr class="border-slate-100 my-2" />
+
             {navItems.map((item) => {
                 const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
-                
-                if (item.name === 'History') {
-                    return (
-                        <>
-                        <a href="https://easychair.org/" target="_blank" class="bg-blue-950 text-white text-center py-2.5 rounded-xl text-xs font-bold shadow-sm">
-                            📝 SUBMIT PAPER (EASYCHAIR)
-                        </a>
-                        <a href="/ai-challenge" class="bg-orange-600 text-white text-center py-2.5 rounded-xl text-xs font-bold shadow-sm">
-                            AI CHALLENGE
-                        </a>
-                        <a href="/industrial-show" class="bg-indigo-600 text-white text-center py-2.5 rounded-xl text-xs font-bold shadow-sm">
-                            INDUSTRIAL SHOW
-                        </a>
-                        <a href={item.href} class={`py-2 px-3 rounded-lg text-sm font-bold ${isActive ? 'bg-slate-100 text-blue-950' : 'text-slate-600'}`}>
-                            {item.name}
-                        </a>
-                        </>
-                    );
-                }
                 return (
                     <a href={item.href} class={`py-2 px-3 rounded-lg text-sm font-bold ${isActive ? 'bg-slate-100 text-blue-950' : 'text-slate-600'}`}>
                         {item.name}
@@ -154,10 +142,10 @@ const navItems = [
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-blue-900 pt-12">
                 <div>
                     <h3 class="text-xl font-bold mb-4">AI4Econ&Biz 2026</h3>
-                    <p class="text-blue-200 text-sm max-w-md">Bridging Artificial Intelligence with Global Economic Excellence. Organized by Foreign Trade University and Partners.</p>
+                    <p class="text-blue-200 text-sm max-w-md">Kết nối Trí tuệ Nhân tạo với Sự phát triển Kinh tế và Kinh doanh Toàn cầu. Tổ chức bởi Trường Đại học Ngoại thương và các Đối tác.</p>
                 </div>
-                <div class="text-right">
-                    <p class="text-sm text-blue-300">© 2026 Foreign Trade University. All rights reserved.</p>
+                <div class="text-right flex items-end justify-end p-0 md:pt-6">
+                    <p class="text-sm text-blue-300">© 2026 Trường Đại học Ngoại thương. Bản quyền đã được bảo lưu.</p>
                 </div>
             </div>
         </footer>

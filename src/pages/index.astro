@@ -1,48 +1,50 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const conferenceTheme = "AI Applications in Economics and Business towards a Sustainable Future";
+const conferenceTheme = "Ứng dụng AI trong Kinh tế và Kinh doanh hướng tới Phát triển Bền vững";
 ---
 
-<Layout title="Home - AI4Econ&Biz 2026">
+<Layout title="Trang chủ - AI4Econ&Biz 2026">
   <main class="bg-slate-50 font-sans text-slate-900 cursor-default">
     
     <section class="relative bg-gradient-to-br from-blue-950 via-slate-900 to-blue-900 py-20 px-6 text-center text-white overflow-hidden border-b-4 border-orange-500">
       <div class="max-w-5xl mx-auto relative z-10">
         <span class="bg-orange-500 text-white text-xs font-bold tracking-widest px-4 py-1.5 rounded-full uppercase shadow-sm">
-          Conference
+          Hội thảo Quốc gia
         </span>
-        <h1 class="text-4xl md:text-6xl font-black mt-5 mb-4 tracking-tight leading-tight text-white">
-          WELCOME TO AI4Econ&Biz 2026
+        
+        <h1 class="whitespace-nowrap text-2xl md:text-4xl font-black mt-5 mb-4 tracking-tight text-white">
+          CHÀO MỪNG ĐẾN VỚI AI4Econ&Biz 2026
         </h1>
+        
         <p class="text-lg md:text-xl font-bold text-orange-400 mb-6 tracking-wide uppercase max-w-4xl mx-auto leading-snug">
           "{conferenceTheme}"
         </p>
         
-        <p class="text-sm md:text-base max-w-4xl mx-auto text-slate-300 font-light leading-relaxed mb-8">
-          Artificial Intelligence (AI) is rapidly reshaping the global economy and business landscapes. Initiated in 2026, AI4Econ&Biz aims to become an annual event series hosted by Foreign Trade University (FTU) in collaboration with FISU Vietnam. In its inaugural year, the program focuses on three core pillars: a Scientific Conference on AI applications in economics, business, and advanced technology towards a sustainable future; an AI Challenge fostering innovation for students; and an Industrial Show driving strategic networking and technology transfer for the business community.
+        <p class="text-sm md:text-base max-w-4xl mx-auto text-slate-300 font-light leading-relaxed mb-8 text-justify md:text-center">
+          Trí tuệ Nhân tạo (AI) đang nhanh chóng tái định hình nền kinh tế toàn cầu và cục diện kinh doanh thế giới. Được khởi xướng từ năm 2026, AI4Econ&Biz hướng tới mục tiêu trở thành chuỗi sự kiện thường niên do Trường Đại học Ngoại thương (FTU) phối hợp tổ chức cùng FISU Việt Nam. Trong năm đầu tiên diễn ra, chương trình tập trung vào ba trụ cột cốt lõi: Hội thảo Khoa học về ứng dụng AI trong kinh tế, kinh doanh và công nghệ tiên tiến hướng tới tương lai bền vững; Cuộc thi AI Challenge thúc đẩy đổi mới sáng tạo cho học sinh - sinh viên; và Triển lãm Industrial Show kết nối chiến lược, chuyển giao công nghệ cho cộng đồng doanh nghiệp.
         </p>
 
-<div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-2 max-w-4xl mx-auto my-6 flex flex-col lg:flex-row items-stretch justify-between gap-4 text-left">
+        <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-2 max-w-4xl mx-auto my-6 flex flex-col lg:flex-row items-stretch justify-between gap-4 text-left">
           
           <div class="flex flex-col sm:flex-row items-center gap-x-8 gap-y-3 p-4 flex-1 justify-center lg:justify-start">
             
             <div class="space-y-0.5 text-center sm:text-left shrink-0">
-              <span class="block text-[10px] font-bold text-orange-400 uppercase tracking-widest">Date</span>
+              <span class="block text-[10px] font-bold text-orange-400 uppercase tracking-widest">Thời gian</span>
               <span class="text-xl md:text-2xl font-black text-white tracking-tight block">
-                August 28, 2026
+                28 Tháng 8, 2026
               </span>
             </div>
             
             <div class="h-10 w-[1px] bg-white/10 hidden sm:block"></div>
             
             <div class="space-y-0.5 text-center sm:text-left">
-              <span class="block text-[10px] font-bold text-orange-400 uppercase tracking-widest">Venue</span>
-              <span class="text-base font-black text-white tracking-tight block leading-tight">
-                Foreign Trade University (FTU)
+              <span class="block text-[10px] font-bold text-orange-400 uppercase tracking-widest">Địa điểm</span>
+              <span class="whitespace-nowrap text-base font-black text-white tracking-tight block leading-tight">
+                Trường Đại học Ngoại thương (FTU)
               </span>
               <span class="text-xs text-slate-300 block leading-normal font-medium">
-                91 Chua Lang, Dong Da, Hanoi
+                91 Chùa Láng, Đống Đa, Hà Nội
               </span>
             </div>
             
@@ -50,16 +52,16 @@ const conferenceTheme = "AI Applications in Economics and Business towards a Sus
 
           <div class="flex items-center gap-2 w-full lg:w-auto p-2 shrink-0 border-t lg:border-t-0 lg:border-l border-white/10">
             <a 
-              href="/call-for-papers" 
-              class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider text-center flex-1 lg:flex-initial transition-all shadow-md hover:-translate-y-0.5"
+              href="/submit-paper" 
+              class="whitespace-nowrap bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider text-center flex-1 lg:flex-initial transition-all shadow-md hover:-translate-y-0.5"
             >
-              Call for Papers
+              Gửi bài
             </a>
             <a 
               href="#important-dates" 
-              class="bg-white/10 hover:bg-white/20 text-white font-semibold px-5 py-3 rounded-xl text-xs uppercase tracking-wider text-center flex-1 lg:flex-initial transition-all border border-white/10"
+              class="whitespace-nowrap bg-white/10 hover:bg-white/20 text-white font-semibold px-5 py-3 rounded-xl text-xs uppercase tracking-wider text-center flex-1 lg:flex-initial transition-all border border-white/10"
             >
-              Important Dates
+              Mốc thời gian
             </a>
           </div>
 
@@ -75,17 +77,17 @@ const conferenceTheme = "AI Applications in Economics and Business towards a Sus
         <div>
           <div class="flex items-center gap-2 mb-2">
             <span class="h-1 w-8 bg-orange-500 rounded-full"></span>
-            <span class="text-blue-600 font-bold text-sm uppercase tracking-wider">Organizer & Host</span>
+            <span class="text-blue-600 font-bold text-sm uppercase tracking-wider">Đơn vị chủ trì & Đăng cai</span>
           </div>
-          <h2 class="text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">
-            Foreign Trade University (FTU)
+          <h2 class="whitespace-nowrap text-2xl md:text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">
+            Trường Đại học Ngoại thương (FTU)
           </h2>
           <div class="text-slate-600 space-y-5 text-justify leading-relaxed text-sm md:text-base">
             <p>
-              Established in 1960, Foreign Trade University (FTU) is widely recognized as one of the most prestigious and top-tier universities in Vietnam. Specializing in economics, international business, management, and tech-driven economic models, FTU stands at the forefront of academic excellence and educational transformation.
+              Được thành lập vào năm 1960, Trường Đại học Ngoại thương (FTU) được công nhận rộng rãi là một trong những trường đại học uy tín và danh giá hàng đầu tại Việt Nam. Khẳng định vị thế tiên phong trong đào tạo xuất sắc và đổi mới giáo dục, FTU chuyên sâu trong các lĩnh vực kinh tế, kinh doanh quốc tế, quản trị và các mô hình kinh tế thúc đẩy bởi công nghệ.
             </p>
             <p>
-              With a firm vision towards deep global integration and innovative scientific research, FTU serves as an elite hub for cultivating top-quality human resources. In 2026, by hosting the <strong>AI4Econ&Biz</strong> conference alongside <strong>FISU Vietnam</strong>, FTU continues to pioneer the integration of Artificial Intelligence within business domains, bridging academic insight with practical industrial application.
+              Với tầm nhìn chiến lược hướng tới hội nhập toàn cầu sâu rộng và nghiên cứu khoa học đột phá, FTU là chiếc nôi tinh hoa tạo ra nguồn nhân lực chất lượng cao cho đất nước. Năm 2026, bằng việc đăng cai tổ chức hội thảo <strong>AI4Econ&Biz</strong> đồng hành cùng <strong>FISU Việt Nam</strong>, FTU tiếp tục khẳng định vai trò tiên phong trong việc tích hợp Trí tuệ Nhân tạo vào khối ngành kinh doanh, bắc cầu tri thức học thuật với ứng dụng thực tiễn trong dòng chảy công nghiệp.
             </p>
           </div>
         </div>
@@ -95,24 +97,25 @@ const conferenceTheme = "AI Applications in Economics and Business towards a Sus
           <div class="relative bg-slate-50 p-3 rounded-2xl border border-slate-100 shadow-lg overflow-hidden aspect-[4/3]">
             <img 
               src="/images/ftu-campus.webp" 
-              alt="Foreign Trade University Campus" 
+              alt="Trường Đại học Ngoại thương Campus" 
               class="w-full h-full object-cover rounded-xl bg-slate-100 transition-transform duration-700 group-hover:scale-105"
               onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1000';" 
             />
           </div>
-          <p class="text-xs text-center text-slate-400 mt-3 italic">Foreign Trade University Campus — Hanoi, Vietnam</p>
+          <p class="whitespace-nowrap text-xs text-center text-slate-400 mt-3 italic">Khuôn viên Trường Đại học Ngoại thương — Hà Nội, Việt Nam</p>
         </div>
       </div>
     </section>
 
     <section id="important-dates" class="max-w-5xl mx-auto py-16 px-6 sm:px-8 border-t border-slate-200">
       <div class="text-center mb-12">
-        <span class="text-orange-600 font-bold text-sm uppercase tracking-widest bg-orange-50 px-4 py-1 rounded-full">Timeline</span>
-        <h2 class="text-3xl font-extrabold text-slate-900 mt-3 tracking-tight">Important Dates</h2>
-        <p class="text-slate-500 mt-2 text-sm">Key deadlines for authors, researchers, and participants.</p>
+        <span class="text-orange-600 font-bold text-sm uppercase tracking-widest bg-orange-50 px-4 py-1 rounded-full">Tiến độ</span>
+        <h2 class="text-3xl font-extrabold text-slate-900 mt-3 tracking-tight">Mốc thời gian</h2>
+        <p class="text-slate-500 mt-2 text-sm">Các thời hạn cốt lõi dành cho tác giả, nhà nghiên cứu và đại biểu tham dự.</p>
       </div>
       
       <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden divide-y divide-slate-100">
+        
         <div class="flex flex-col sm:flex-row sm:items-center justify-between p-6 hover:bg-slate-50/60 transition-colors gap-4">
           <div class="flex items-start gap-4">
             <div class="mt-1 text-blue-600 bg-blue-50 p-2 rounded-lg">
@@ -121,12 +124,12 @@ const conferenceTheme = "AI Applications in Economics and Business towards a Sus
               </svg>
             </div>
             <div>
-              <h3 class="font-bold text-slate-800 text-base md:text-lg">Full Paper Submission Deadline</h3>
+              <h3 class="font-bold text-slate-800 text-base md:text-lg">Hạn chót nộp báo cáo toàn văn (Full Paper)</h3>
             </div>
           </div>
           <div class="flex items-center gap-6 justify-between sm:justify-end">
-            <span class="font-bold text-slate-700 text-right text-base min-w-[180px]">June 15, 2026</span>
-            <span class="text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider text-center w-32 bg-green-100 text-green-700">Open</span>
+            <span class="font-bold text-slate-700 text-right text-base min-w-[180px]">15 Tháng 6, 2026</span>
+            <span class="text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider text-center w-32 bg-green-100 text-green-700">Đang nhận</span>
           </div>
         </div>
 
@@ -138,12 +141,12 @@ const conferenceTheme = "AI Applications in Economics and Business towards a Sus
               </svg>
             </div>
             <div>
-              <h3 class="font-bold text-slate-800 text-base md:text-lg">Notification of Acceptance</h3>
+              <h3 class="font-bold text-slate-800 text-base md:text-lg">Thông báo kết quả chấp nhận (Notification)</h3>
             </div>
           </div>
           <div class="flex items-center gap-6 justify-between sm:justify-end">
-            <span class="font-bold text-slate-700 text-right text-base min-w-[180px]">July 2026</span>
-            <span class="text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider text-center w-32 bg-slate-100 text-slate-500">Upcoming</span>
+            <span class="font-bold text-slate-700 text-right text-base min-w-[180px]">Tháng 7, 2026</span>
+            <span class="text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider text-center w-32 bg-slate-100 text-slate-500">Sắp diễn ra</span>
           </div>
         </div>
 
@@ -155,12 +158,12 @@ const conferenceTheme = "AI Applications in Economics and Business towards a Sus
               </svg>
             </div>
             <div>
-              <h3 class="font-bold text-slate-800 text-base md:text-lg">Main Conference Date</h3>
+              <h3 class="font-bold text-slate-800 text-base md:text-lg">Ngày diễn ra Hội thảo chính thức</h3>
             </div>
           </div>
           <div class="flex items-center gap-6 justify-between sm:justify-end">
-            <span class="font-bold text-slate-700 text-right text-base min-w-[180px]">August 28, 2026</span>
-            <span class="text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider text-center w-32 bg-orange-100 text-orange-700">Main Event</span>
+            <span class="font-bold text-slate-700 text-right text-base min-w-[180px]">28 Tháng 8, 2026</span>
+            <span class="text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider text-center w-32 bg-orange-100 text-orange-700">Sự kiện chính</span>
           </div>
         </div>
       </div>
@@ -168,22 +171,22 @@ const conferenceTheme = "AI Applications in Economics and Business towards a Sus
 
     <section class="bg-slate-100 py-16 px-6 border-t border-slate-200">
       <div class="max-w-6xl mx-auto">
-        <p class="text-xs uppercase tracking-widest font-bold text-slate-400 text-center mb-8">Hosted & Co-Organized by</p>
+        <p class="text-xs uppercase tracking-widest font-bold text-slate-400 text-center mb-8">Đơn vị tổ chức & phối hợp thực hiện</p>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
           <a href="https://www.ftu.edu.vn/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-200/60 hover:border-blue-400 hover:shadow-md transition-all group cursor-pointer">
             <img src="/logos/ftu-logo.png" alt="FTU Logo" class="h-14 w-auto object-contain shrink-0" />
             <div class="flex flex-col">
-              <span class="text-xs font-bold text-blue-600 uppercase tracking-wider group-hover:text-blue-700">Host Institution</span>
-              <span class="text-sm font-semibold text-slate-800 group-hover:text-slate-900">Foreign Trade University (FTU)</span>
+              <span class="text-xs font-bold text-blue-600 uppercase tracking-wider group-hover:text-blue-700">Đơn vị đăng cai</span>
+              <span class="text-sm font-semibold text-slate-800 group-hover:text-slate-900">Trường Đại học Ngoại thương (FTU)</span>
             </div>
           </a>
 
           <a href="http://fisu.vn/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-200/60 hover:border-indigo-400 hover:shadow-md transition-all group cursor-pointer">
             <img src="/logos/fisu-logo.png" alt="FISU Logo" class="h-14 w-auto object-contain shrink-0" onerror="this.src='/logos/ftu-logo.png'; this.style.opacity='0.3';" />
             <div class="flex flex-col">
-              <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider group-hover:text-indigo-700">Co-Organizer</span>
-              <span class="text-sm font-semibold text-slate-800 group-hover:text-slate-900">FISU Vietnam</span>
+              <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider group-hover:text-indigo-700">Đơn vị đồng tổ chức</span>
+              <span class="text-sm font-semibold text-slate-800 group-hover:text-slate-900">FISU Việt Nam</span>
             </div>
           </a>
         </div>

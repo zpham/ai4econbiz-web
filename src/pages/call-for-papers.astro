@@ -1,77 +1,101 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// DANH SÁCH CHỦ ĐỀ NGHIÊN CỨU TRÍCH XUẤT CHÍNH XÁC TỪ FILE DOCX
+// DANH SÁCH CHỦ ĐỀ NGHIÊN CỨU
 const topicsOfInterest = [
   {
-    domain: "Domain 1: Economics & Management",
+    domain: "Lĩnh vực 1: Kinh tế & Quản lý",
     items: [
-      "AI in Trade & Investment: Analyzing international trade/investment data, risk & fraud prevention, recommendation systems, dynamic pricing, customer behavior analysis, virtual assistants, and new digital business models.",
-      "AI in Finance & Fintech: Credit scoring, financial fraud detection, and integration solutions between Blockchain and AI.",
-      "AI in Economic Management: Economic forecasting, policy orientation, formulation, and implementation solutions."
+      "AI trong Thương mại & Đầu tư: Phân tích dữ liệu thương mại/đầu tư quốc tế, phòng chống rủi ro & gian lận, hệ thống gợi ý, định giá động, phân tích hành vi khách hàng, trợ lý ảo và các mô hình kinh doanh số mới.",
+      "AI trong Tài chính & Công nghệ tài chính (Fintech): Chấm điểm tín dụng, phát hiện gian lận tài chính và các giải pháp tích hợp giữa Blockchain và AI.",
+      "AI trong Quản lý Kinh tế: Dự báo kinh tế, định hướng, hoạch định và thực thi chính sách vĩ mô."
     ]
   },
   {
-    domain: "Domain 2: Corporate Governance & Operations",
+    domain: "Lĩnh vực 2: Quản trị Doanh nghiệp & Vận hành",
     items: [
-      "AI in Corporate Governance: Decision-support systems, business strategy formulation, resource analysis, and performance evaluation.",
-      "AI in Logistics & Supply Chain: Route optimization, warehouse automation, digital twins application, and smart operational solutions."
+      "AI trong Quản trị Doanh nghiệp: Hệ thống hỗ trợ ra quyết định, hoạch định chiến lược kinh doanh, phân tích nguồn lực và đánh giá hiệu suất (KPI).",
+      "AI trong Logistics & Chuỗi cung ứng: Tối ưu hóa lộ trình vận chuyển, tự động hóa kho bãi, ứng dụng bản sao số (Digital Twins) và các giải pháp vận hành thông minh."
     ]
   },
   {
-    domain: "Domain 3: Social, Ethical & Sustainable Development Issues",
+    domain: "Lĩnh vực 3: Các vấn đề Xã hội, Đạo đức & Phát triển Bền vững",
     items: [
-      "Social Issues: Impact of AI on employment, labor productivity, training, and retraining requirements.",
-      "Ethical Issues: AI governance, data privacy, and legal regulations for AI in economics and business.",
-      "Sustainable Development: Energy transition, emission reduction, green economy, and circular economy."
+      "Vấn đề Xã hội: Tác động của AI đến việc làm, năng suất lao động, yêu cầu đào tạo và tái đào tạo lực lượng lao động.",
+      "Vấn đề Đạo đức: Quản trị AI, bảo mật dữ liệu riêng tư và các quy định pháp lý cho AI trong kinh tế và kinh doanh.",
+      "Phát triển Bền vững: Chuyển dịch năng lượng, giảm phát thải, kinh tế xanh và kinh tế tuần hoàn."
     ]
   },
   {
-    domain: "Domain 4: Advanced Technology",
+    domain: "Lĩnh vực 4: Công nghệ Tiên tiến",
     items: [
-      "AI Platforms & Systems Architecture: Optimization of foundational models, MLOps systems, fine-tuning techniques, and big data processing.",
-      "AI Security & Sustainability: System security and data attack prevention.",
-      "Advanced AI Technologies: Intensive algorithms for Natural Language Processing (NLP), Computer Vision, and explainable AI (XAI)."
+      "Nền tảng & Kiến trúc hệ thống AI: Tối ưu hóa các mô hình nền tảng (Foundational Models), hệ thống MLOps, kỹ thuật tinh chỉnh (Fine-tuning) và xử lý dữ liệu lớn (Big Data).",
+      "An ninh & Tính bền vững của AI: Bảo mật hệ thống và phòng chống tấn công dữ liệu.",
+      "Công nghệ AI chuyên sâu: Các thuật toán nâng cao cho Xử lý ngôn ngữ tự nhiên (NLP), Thị giác máy tính (Computer Vision) và AI có thể giải thích được (XAI)."
     ]
   }
 ];
 ---
 
-<Layout title="Call for Papers - AI4Econ&Biz 2026">
-  <main class="bg-slate-50 font-sans text-slate-900 cursor-default py-10 min-h-screen">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+<Layout title="Thông báo - AI4Econ&Biz 2026">
+  <main class="bg-slate-50 font-sans text-slate-900 py-12 min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
       
-      <div class="border-b-2 border-orange-500 pb-3 mb-6">
-        <h1 class="text-2xl font-black text-blue-950 uppercase tracking-tight">
-          Call for Papers
+      <div class="border-b-2 border-blue-950 pb-3 mb-6 flex items-center justify-between">
+        <h1 class="text-xl md:text-2xl font-black text-blue-950 uppercase tracking-tight">
+          📢 THÔNG BÁO TỔ CHỨC HỘI THẢO
         </h1>
+        <span class="bg-blue-100 text-blue-950 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm hidden sm:inline-block">
+          Văn bản chính thức
+        </span>
       </div>
 
-      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm mb-6 text-sm text-slate-600 text-justify leading-relaxed">
-        <p>
-          The National Scientific Conference <strong>AI4Econ&Biz 2026</strong>, themed <em>“AI Applications in Economics and Business towards a Sustainable Future,”</em> serves as an academic platform for policymakers, researchers, and corporate communities to exchange deep insights and discuss effective, responsible AI adoption. We cordially invite academic scientists, researchers, and experts to submit their research papers to the conference.
-        </p>
-      </div>
-
-      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-6">
-        <div>
-          <h2 class="text-xs font-bold text-orange-600 uppercase tracking-widest mb-4 pb-1 border-b border-slate-100">
-            Topics of Interest
-          </h2>
-          <p class="text-xs text-slate-400 mb-4 italic">We welcome submissions including, but not limited to, the following domains:</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="space-y-2 group">
+          <span class="text-[11px] uppercase tracking-widest font-black text-blue-950 block text-center bg-slate-100 py-1 rounded-md group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">Trang 1</span>
+          <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm hover:border-blue-400 hover:shadow-md transition-all duration-300">
+            <img src="/f1.png" alt="Thông báo tổ chức hội thảo - Trang 1" class="w-full h-auto object-contain cursor-zoom-in transition-transform duration-500 hover:scale-102" />
+          </div>
+        </div>
+        
+        <div class="space-y-2 group">
+          <span class="text-[11px] uppercase tracking-widest font-black text-blue-950 block text-center bg-slate-100 py-1 rounded-md group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">Trang 2</span>
+          <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm hover:border-blue-400 hover:shadow-md transition-all duration-300">
+            <img src="/f2.png" alt="Thông báo tổ chức hội thảo - Trang 2" class="w-full h-auto object-contain cursor-zoom-in transition-transform duration-500 hover:scale-102" />
+          </div>
         </div>
 
-        <div class="space-y-6">
+        <div class="space-y-2 group">
+          <span class="text-[11px] uppercase tracking-widest font-black text-blue-950 block text-center bg-slate-100 py-1 rounded-md group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">Trang 3</span>
+          <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm hover:border-blue-400 hover:shadow-md transition-all duration-300">
+            <img src="/f3.png" alt="Thông báo tổ chức hội thảo - Trang 3" class="w-full h-auto object-contain cursor-zoom-in transition-transform duration-500 hover:scale-102" />
+          </div>
+        </div>
+      </div>
+
+      <div class="border-b border-slate-200 pb-2 mb-4 flex items-center gap-3">
+        <span class="h-1 w-8 bg-orange-500 rounded-full"></span>
+        <h2 class="text-lg font-extrabold text-slate-900 uppercase tracking-tight">
+          Chủ đề nghiên cứu
+        </h2>
+      </div>
+
+      <div class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-8">
+        <div class="space-y-1">
+          <p class="text-xs md:text-sm text-slate-500 italic">Ban Tổ chức hoan nghênh các bài viết thuộc các lĩnh vực nội dung sau đây (nhưng không giới hạn):</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6">
           {topicsOfInterest.map((domain) => (
-            <div class="space-y-2">
-              <h3 class="text-xs font-bold text-blue-950 uppercase tracking-wide flex items-center gap-2">
-                <span class="w-1 h-3 bg-blue-600 rounded-full inline-block"></span>
+            <div class="p-4 rounded-xl bg-slate-50/60 border border-slate-100 hover:border-blue-100 hover:bg-blue-50/20 transition-all space-y-3">
+              <h3 class="text-sm font-bold text-blue-950 flex items-center gap-2">
+                <span class="w-2 h-2 bg-orange-500 rounded-full inline-block"></span>
                 {domain.domain}
               </h3>
-              <ul class="space-y-1.5 pl-3">
+              <ul class="space-y-2.5 pl-4">
                 {domain.items.map((item) => (
-                  <li class="text-xs text-slate-600 leading-relaxed text-justify list-none flex items-start gap-2">
-                    <span class="text-orange-500 shrink-0 select-none">•</span>
+                  <li class="text-xs text-slate-600 leading-relaxed text-justify list-none flex items-start gap-2.5">
+                    <span class="text-orange-500 shrink-0 select-none mt-0.5">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -80,6 +104,10 @@ const topicsOfInterest = [
           ))}
         </div>
       </div>
+
+      <p class="mt-8 text-center text-xs text-slate-400 italic leading-relaxed max-w-2xl mx-auto">
+        "Ban Tổ chức trân trọng kính mời các nhà khoa học, các nhà nghiên cứu, chuyên gia, các Bộ, Ban, Ngành và cộng đồng doanh nghiệp quan tâm viết bài và đăng ký tham dự Hội thảo để cùng trao đổi và kiến tạo những giá trị mới cho nền kinh tế."
+      </p>
 
     </div>
   </main>
