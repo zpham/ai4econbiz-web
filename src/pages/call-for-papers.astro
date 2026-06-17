@@ -52,23 +52,23 @@ const topicsOfInterest = [
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
         <div class="space-y-2 group">
-          <span class="text-[11px] uppercase tracking-widest font-black text-blue-950 block text-center bg-slate-100 py-1 rounded-md group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">Trang 1</span>
+          <span class="text-[11px] uppercase tracking-widest font-black text-blue-950 block text-center bg-slate-100 py-1 rounded-md group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors cursor-pointer">Trang 1</span>
           <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm hover:border-blue-400 hover:shadow-md transition-all duration-300">
-            <img src="/f1.png" alt="Thông báo tổ chức hội thảo - Trang 1" class="w-full h-auto object-contain cursor-zoom-in transition-transform duration-500 hover:scale-102" />
+            <img src="/f1.png" alt="Thông báo tổ chức hội thảo - Trang 1" class="zoom-trigger w-full h-auto object-contain cursor-zoom-in transition-transform duration-500 hover:scale-102" />
           </div>
         </div>
         
         <div class="space-y-2 group">
-          <span class="text-[11px] uppercase tracking-widest font-black text-blue-950 block text-center bg-slate-100 py-1 rounded-md group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">Trang 2</span>
+          <span class="text-[11px] uppercase tracking-widest font-black text-blue-950 block text-center bg-slate-100 py-1 rounded-md group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors cursor-pointer">Trang 2</span>
           <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm hover:border-blue-400 hover:shadow-md transition-all duration-300">
-            <img src="/f2.png" alt="Thông báo tổ chức hội thảo - Trang 2" class="w-full h-auto object-contain cursor-zoom-in transition-transform duration-500 hover:scale-102" />
+            <img src="/f2.png" alt="Thông báo tổ chức hội thảo - Trang 2" class="zoom-trigger w-full h-auto object-contain cursor-zoom-in transition-transform duration-500 hover:scale-102" />
           </div>
         </div>
 
         <div class="space-y-2 group">
-          <span class="text-[11px] uppercase tracking-widest font-black text-blue-950 block text-center bg-slate-100 py-1 rounded-md group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">Trang 3</span>
+          <span class="text-[11px] uppercase tracking-widest font-black text-blue-950 block text-center bg-slate-100 py-1 rounded-md group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors cursor-pointer">Trang 3</span>
           <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm hover:border-blue-400 hover:shadow-md transition-all duration-300">
-            <img src="/f3.png" alt="Thông báo tổ chức hội thảo - Trang 3" class="w-full h-auto object-contain cursor-zoom-in transition-transform duration-500 hover:scale-102" />
+            <img src="/f3.png" alt="Thông báo tổ chức hội thảo - Trang 3" class="zoom-trigger w-full h-auto object-contain cursor-zoom-in transition-transform duration-500 hover:scale-102" />
           </div>
         </div>
       </div>
@@ -110,5 +110,52 @@ const topicsOfInterest = [
       </p>
 
     </div>
+
+    <div id="lightbox" class="fixed inset-0 bg-slate-950/90 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+      <button id="lightbox-close" class="absolute top-4 right-4 text-white hover:text-orange-500 text-3xl font-light transition-colors select-none z-50 p-2" aria-label="Đóng">&times;</button>
+      <div class="max-w-[90vw] max-h-[85vh] p-2 flex items-center justify-center relative select-none">
+        <img id="lightbox-img" src="" alt="Văn bản phóng to" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/10" />
+      </div>
+    </div>
   </main>
 </Layout>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+  const closeBtn = document.getElementById('lightbox-close');
+  const triggers = document.querySelectorAll('.zoom-trigger');
+
+  // Mở hộp ảnh khi click vào bất kỳ trang nào
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      const target = e.target as HTMLImageElement;
+      if (lightbox && lightboxImg) {
+        lightboxImg.src = target.src;
+        lightboxImg.alt = target.alt;
+        lightbox.classList.remove('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = 'hidden'; // Khóa cuộn trang nền
+      }
+    });
+  });
+
+  // Đóng hộp ảnh khi ấn nút X hoặc bấm ra vùng ngoài ảnh
+  const closeLightbox = () => {
+    if (lightbox) {
+      lightbox.classList.add('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = ''; // Mở lại cuộn trang
+    }
+  };
+
+  closeBtn?.addEventListener('click', closeLightbox);
+  lightbox?.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  // Nhấn nút ESC trên bàn phím cũng đóng được ảnh
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
