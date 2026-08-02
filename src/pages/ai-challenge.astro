@@ -6,6 +6,30 @@ import Layout from '../layouts/Layout.astro';
   <main class="bg-slate-50 font-sans text-slate-900 cursor-default py-10 min-h-screen">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
       
+      <!-- KHỐI NHÀ TÀI TRỢ VÀNG (VIETTEL) - ĐẶT NỔI BẬT Ở TRÊN CÙNG -->
+      <div class="mb-6 bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white p-3.5 px-5 rounded-2xl shadow-md flex items-center justify-between gap-4 border border-red-500/30">
+        <div class="space-y-0.5">
+          <span class="bg-amber-400 text-red-950 font-black text-[9px] uppercase px-2 py-0.5 rounded tracking-widest inline-block shadow-sm">
+            🥇 Nhà tài trợ Vàng
+          </span>
+          <p class="text-xs md:text-sm font-extrabold tracking-tight text-white">
+            Tập đoàn Công nghiệp - Viễn thông Quân đội (Viettel)
+          </p>
+          <p class="text-[11px] text-rose-100 font-medium italic hidden sm:block">
+            Đồng hành cùng tri thức trẻ và khát vọng đổi mới sáng tạo AI4Econ&Biz 2026
+          </p>
+        </div>
+        <div class="shrink-0 bg-white p-1.5 rounded-xl shadow-inner border border-white/20">
+          <img 
+            src="/logo-vt.jpg" 
+            alt="Viettel Logo" 
+            class="h-10 md:h-12 w-auto object-contain rounded-lg"
+            onerror="this.src='/logos/viettel-logo.png';" 
+          />
+        </div>
+      </div>
+
+      <!-- TIÊU ĐỀ CUỘC THI -->
       <div class="border-b-2 border-orange-500 pb-4 mb-6">
         <span class="block text-[11px] font-bold text-orange-600 uppercase tracking-widest mb-1">Cuộc thi chính thức</span>
         <h1 class="text-xl md:text-2xl font-black text-blue-950 uppercase tracking-tight leading-tight">
@@ -14,11 +38,13 @@ import Layout from '../layouts/Layout.astro';
         </h1>
       </div>
 
+      <!-- THÔNG TIN CÁC BẢNG ĐẤU -->
       <div class="space-y-6 mb-8">
         <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Bảng đấu & Quy chuẩn nộp bài</h2>
         
         <div class="grid grid-cols-1 gap-4">
           
+          <!-- BẢNG A: ĐẠI HỌC -->
           <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
             <div class="bg-blue-950 text-white p-3 px-4 flex justify-between items-center">
               <span class="text-xs font-black uppercase tracking-wider">BẢNG A: ĐẠI HỌC</span>
@@ -57,6 +83,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
+          <!-- BẢNG B: TRUNG HỌC PHỔ THÔNG -->
           <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
             <div class="bg-purple-950 text-white p-3 px-4 flex justify-between items-center">
               <span class="text-xs font-black uppercase tracking-wider">BẢNG B: TRUNG HỌC PHỔ THÔNG</span>
@@ -98,12 +125,14 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
+      <!-- TIẾN TRÌNH CUỘC THI -->
       <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm mb-6 space-y-4">
         <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest pb-1 border-b border-slate-100">
           📋 Tiến trình cuộc thi
         </h2>
         
         <div class="space-y-4">
+          <!-- BƯỚC 1 -->
           <div class="flex gap-3 text-xs items-start">
             <span class="font-bold text-orange-500 min-w-[50px] shrink-0 mt-0.5">BƯỚC 1</span>
             <div class="text-slate-700 leading-relaxed">
@@ -111,24 +140,50 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
+          <!-- BƯỚC 2: BỔ SUNG THÔNG TIN WEBINAR CỦA ANH NGUYỄN VIỆT -->
           <div class="flex gap-3 text-xs items-start">
             <span class="font-bold text-blue-600 min-w-[50px] shrink-0 mt-0.5">BƯỚC 2</span>
-            <div class="text-slate-700 leading-relaxed">
-              <strong>Buổi phát động (Kick-off):</strong> Buổi phổ biến quy chế và định hướng chuyên sâu diễn ra trực tuyến qua 
-              <span class="bg-blue-100 text-blue-800 font-bold px-1.5 py-0.5 rounded text-[11px] inline-block mx-0.5 shadow-sm">Zoom (2 Tiếng)</span> 
-              để giao lưu cùng các chuyên gia công nghệ hàng đầu và giải đáp Q&A trực tiếp.
+            <div class="text-slate-700 leading-relaxed space-y-2">
+              <div>
+                <strong>Buổi phát động & Webinar Hướng dẫn:</strong> Giải đáp thắc mắc về công nghệ, thể lệ và định hướng bài thi cùng Ban Tổ chức & Diễn giả khách mời.
+              </div>
+              <div class="bg-blue-50/70 border border-blue-100 rounded-lg p-3 space-y-1.5">
+                <div class="flex flex-wrap items-center justify-between gap-1">
+                  <span class="font-bold text-blue-950">🎙️ Diễn giả: Anh Nguyễn Việt</span>
+                  <span class="bg-blue-200/60 text-blue-900 font-bold px-2 py-0.5 rounded text-[10px]">Hot YouTuber 50k+ subs</span>
+                </div>
+                <p class="text-slate-600">
+                  ⏰ <strong>Thời gian:</strong> 20:00 | Thứ Ba, ngày 04/08/2026
+                </p>
+                <div class="pt-1">
+                  <a 
+                    href="https://meet.google.com/smu-itwp-svd" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white font-bold px-3 py-1 rounded-md text-[11px] transition-colors shadow-sm"
+                  >
+                    📹 Tham gia Google Meet ngay
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
+          <!-- BƯỚC 3: GẠCH NGÀY 05/08 VÀ HIGHLIGHT NGÀY 15/08/2026 -->
           <div class="flex gap-3 text-xs items-start">
             <span class="font-bold text-slate-500 min-w-[50px] shrink-0 mt-0.5">BƯỚC 3</span>
             <div class="text-slate-700 leading-relaxed">
               <strong>Đánh giá Vòng sơ loại (Vòng 1):</strong> Hội đồng Ban giám khảo chấm điểm trực tuyến để lựa chọn và công bố danh sách 
               <span class="bg-indigo-100 text-indigo-800 font-bold px-1.5 py-0.5 rounded text-[11px] inline-block mx-0.5 shadow-sm">Top 10 Đội thi xuất sắc nhất cho mỗi bảng</span> 
-              bước tiếp vào vòng trong vào ngày <span class="bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded text-[11px] inline-block mx-0.5 shadow-sm">05/08/2026</span>.
+              bước tiếp vào vòng trong vào ngày 
+              <span class="text-slate-400 line-through mx-1 font-medium">05/08/2026</span>
+              <span class="bg-red-100 text-red-700 font-black px-2 py-0.5 rounded-md text-[11px] inline-block border border-red-200 animate-pulse shadow-sm">
+                ➔ 15/08/2026 (Gia hạn)
+              </span>.
             </div>
           </div>
 
+          <!-- BƯỚC 4 -->
           <div class="flex gap-3 text-xs items-start">
             <span class="font-bold text-purple-600 min-w-[50px] shrink-0 mt-0.5">BƯỚC 4</span>
             <div class="text-slate-700 leading-relaxed">
@@ -138,6 +193,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
+          <!-- BƯỚC 5 -->
           <div class="flex gap-3 text-xs items-start">
             <span class="font-bold text-green-600 min-w-[50px] shrink-0 mt-0.5">BƯỚC 5</span>
             <div class="text-slate-700 leading-relaxed">
@@ -149,6 +205,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
+      <!-- CƠ CẤU GIẢI THƯỞNG -->
       <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
         <div class="space-y-1">
           <h2 class="text-xs font-bold text-blue-950 uppercase tracking-wider">🏆 Cơ cấu giải thưởng</h2>
@@ -160,6 +217,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
+      <!-- NÚT ĐĂNG KÝ -->
       <div class="mt-6 text-center">
         <a 
           href="https://forms.gle/q1Y5TTNxKTmeY9yL9" 
