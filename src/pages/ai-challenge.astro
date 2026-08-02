@@ -6,25 +6,27 @@ import Layout from '../layouts/Layout.astro';
   <main class="bg-slate-50 font-sans text-slate-900 cursor-default py-10 min-h-screen">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
       
-      <!-- KHỐI NHÀ TÀI TRỢ VÀNG (VIETTEL) - ĐẶT NỔI BẬT Ở TRÊN CÙNG -->
-      <div class="mb-6 bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white p-3.5 px-5 rounded-2xl shadow-md flex items-center justify-between gap-4 border border-red-500/30">
-        <div class="space-y-0.5">
+      <!-- KHỐI NHÀ TÀI TRỢ VÀNG (VIETTEL) - ĐÃ CĂN CHỈNH KHỔ ẢNH HÌNH VUÔNG -->
+      <div class="mb-6 bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white p-4 px-5 rounded-2xl shadow-md flex items-center justify-between gap-4 border border-red-500/30">
+        <div class="space-y-1">
           <span class="bg-amber-400 text-red-950 font-black text-[9px] uppercase px-2 py-0.5 rounded tracking-widest inline-block shadow-sm">
             🥇 Nhà tài trợ Vàng
           </span>
-          <p class="text-xs md:text-sm font-extrabold tracking-tight text-white">
+          <p class="text-sm md:text-base font-extrabold tracking-tight text-white leading-snug">
             Tập đoàn Công nghiệp - Viễn thông Quân đội (Viettel)
           </p>
           <p class="text-[11px] text-rose-100 font-medium italic hidden sm:block">
-            Đồng hành cùng tri thức trẻ và khát vọng đổi mới sáng tạo
+            Đồng hành cùng tri thức trẻ và khát vọng đổi mới sáng tạo AI4Econ&Biz 2026
           </p>
         </div>
-        <div class="shrink-0 bg-white p-1.5 rounded-xl shadow-inner border border-white/20">
+        
+        <!-- HỘP CHỨA LOGO HÌNH VUÔNG NỔI BẬT -->
+        <div class="shrink-0 bg-white p-1 rounded-xl shadow-md border border-white/40 overflow-hidden w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
           <img 
             src="/logo-vt.jpg" 
             alt="Viettel Logo" 
-            class="h-10 md:h-12 w-auto object-contain rounded-lg"
-            onerror="this.src='/logos/viettel-logo.png';" 
+            class="w-full h-full object-cover rounded-lg"
+            onerror="this.src='/logo-vt.png';" 
           />
         </div>
       </div>
@@ -140,7 +142,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
-          <!-- BƯỚC 2: BỔ SUNG THÔNG TIN WEBINAR CỦA ANH NGUYỄN VIỆT -->
+          <!-- BƯỚC 2: WEBINAR -->
           <div class="flex gap-3 text-xs items-start">
             <span class="font-bold text-blue-600 min-w-[50px] shrink-0 mt-0.5">BƯỚC 2</span>
             <div class="text-slate-700 leading-relaxed space-y-2">
@@ -169,7 +171,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
-          <!-- BƯỚC 3: GẠCH NGÀY 05/08 VÀ HIGHLIGHT NGÀY 15/08/2026 -->
+          <!-- BƯỚC 3 -->
           <div class="flex gap-3 text-xs items-start">
             <span class="font-bold text-slate-500 min-w-[50px] shrink-0 mt-0.5">BƯỚC 3</span>
             <div class="text-slate-700 leading-relaxed">
