@@ -1,22 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// CÁC HẠNG MỤC HỢP TÁC DÀNH CHO DOANH NGHIỆP - ĐÃ VIỆT HÓA CHUẨN THƯƠNG MẠI
-const showHighlights = [
+// DANH SÁCH 3 TẬP ĐOÀN CÔNG NGHỆ HÀNG ĐẦU TÀI TRỢ & THAM GIA TRIỂN LÃM
+const enterprisePartners = [
   {
-    title: "Triển lãm Công nghệ Đột phá",
-    description: "Không gian cao cấp dành cho các doanh nghiệp công nghệ trình diễn các mô hình AI tiên tiến, giải pháp tự động hóa và ứng dụng kinh doanh thông minh trực tiếp tới các đối tác chiến lược.",
-    badge: "Trưng bày"
+    title: "Tập đoàn Viettel",
+    description: "Nhà tài trợ Vàng – Đơn vị tiên phong trong hệ sinh thái hạ tầng số, các giải pháp AI vĩ mô, điện toán đám mây và an ninh mạng quốc gia, mang đến những nền tảng ứng dụng đột phá cho nền kinh tế.",
+    badge: "Tài trợ Vàng"
   },
   {
-    title: "Kết nối Chiến lược B2B",
-    description: "Mạng lưới giao thương đặc quyền được thiết kế nhằm bắc cầu hợp tác giữa các nhà lãnh đạo doanh nghiệp, viện nghiên cứu, nhà hoạch định chính sách và các quỹ đầu tư mạo hiểm.",
-    badge: "Kết nối"
+    title: "Tập đoàn FPT",
+    description: "Tập đoàn công nghệ hàng đầu khu vực, trình diễn các hệ sinh thái AI toàn diện, giải pháp tự động hóa doanh nghiệp và chuyển đổi số chuyên sâu phục vụ quản trị và phát triển bền vững.",
+    badge: "Đối tác Chiến lược"
   },
   {
-    title: "Chuyển giao Công nghệ",
-    description: "Nền tảng thực tiễn thúc đẩy thương mại hóa các kết quả nghiên cứu khoa học, triển khai trực tiếp các hệ thống AI mạnh mẽ vào quy trình vận hành thực tế của doanh nghiệp.",
-    badge: "Triển khai"
+    title: "Tập đoàn CMC",
+    description: "Đối tác công nghệ uy tín với thế mạnh về hạ tầng dữ liệu lớn, điện toán đám mây thế hệ mới và các giải pháp AI thông minh tối ưu hóa vận hành kinh doanh cho doanh nghiệp.",
+    badge: "Đối tác Công nghệ"
   }
 ];
 ---
@@ -53,12 +53,15 @@ const showHighlights = [
         </div>
       </div>
 
+      <!-- KHỐI 3 TẬP ĐOÀN CÔNG NGHỆ HÀNG ĐẦU DÀNH CHO CÁC ĐỐI TÁC -->
       <div class="space-y-4">
-        <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Cơ hội cốt lõi dành cho đối tác</h2>
+        <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest">
+          Tập đoàn Công nghệ Đồng hành & Triển lãm
+        </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {showHighlights.map((item) => (
-            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-slate-900 hover:shadow transition-all flex flex-col justify-between group">
+          {enterprisePartners.map((item) => (
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-blue-950 hover:shadow-md transition-all flex flex-col justify-between group">
               <div class="space-y-2">
                 <span class="inline-block bg-orange-50 text-orange-700 border border-orange-100 font-bold text-[9px] uppercase tracking-wider px-2 py-0.5 rounded">
                   {item.badge}
