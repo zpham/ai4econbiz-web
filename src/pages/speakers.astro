@@ -1,80 +1,154 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// HỆ THỐNG DỮ LIỆU DIỄN GIẢ CHÍNH - ĐÃ VIỆT HÓA CHUẨN KHOA HỌC
+// 1. DIỄN GIẢ CHÍNH (KEYNOTE SPEAKER)
 const keynoteSpeakers = [
   {
     name: "GS. TS. Nguyễn Lê Minh",
     institution: "JAIST, Nhật Bản",
     topic: "Tích hợp chiến lược AI trong các mô hình kinh tế toàn cầu và xu hướng quản trị kinh doanh tương lai",
-    image: "/images/speakers/speaker1.jpg" // Đường dẫn ảnh của diễn giả
+    image: "/images/speakers/speaker1.jpg"
+  }
+];
+
+// 2. DIỄN GIẢ THẢO LUẬN BÀN TRÒN (PANEL DISCUSSION) - 6 DIỄN GIẢ
+const panelSpeakers = [
+  {
+    name: "Diễn giả Thảo luận 1",
+    institution: "Trường Đại học / Viện nghiên cứu",
+    role: "Điều phối viên (Moderator)",
+    image: "/images/speakers/panel1.jpg"
   },
   {
-    name: "TS. [Diễn giả chính 2]",
-    institution: "Tập đoàn Công nghệ Hàng đầu / Viện Nghiên cứu AI",
-    topic: "Hệ thống Học máy Nâng cao và giải pháp chuyển giao công nghệ cho vận hành doanh nghiệp",
-    image: "/images/speakers/speaker2.jpg"
+    name: "Diễn giả Thảo luận 2",
+    institution: "Tập đoàn Viettel",
+    role: "Đại diện Doanh nghiệp",
+    image: "/images/speakers/panel2.jpg"
   },
   {
-    name: "PGS. TS. [Diễn giả chính 3]",
-    institution: "Trường Đại học Ngoại thương (FTU) / FISU Việt Nam",
-    topic: "Thúc đẩy tăng trưởng kinh tế bền vững thông qua các ứng dụng AI có trách nhiệm",
-    image: "/images/speakers/speaker3.jpg"
+    name: "Diễn giả Thảo luận 3",
+    institution: "Tập đoàn FPT",
+    role: "Chuyên gia Công nghệ",
+    image: "/images/speakers/panel3.jpg"
+  },
+  {
+    name: "Diễn giả Thảo luận 4",
+    institution: "Tập đoàn CMC",
+    role: "Đại diện Doanh nghiệp",
+    image: "/images/speakers/panel4.jpg"
+  },
+  {
+    name: "Diễn giả Thảo luận 5",
+    institution: "Cơ quan Quản lý / Bộ, Ban, Ngành",
+    role: "Nhà hoạch định chính sách",
+    image: "/images/speakers/panel5.jpg"
+  },
+  {
+    name: "Diễn giả Thảo luận 6",
+    institution: "Trường Đại học Ngoại thương (FTU) / FISU",
+    role: "Chuyên gia Học thuật",
+    image: "/images/speakers/panel6.jpg"
   }
 ];
 ---
 
-<Layout title="Diễn giả chính - AI4Econ&Biz 2026">
+<Layout title="Diễn giả - AI4Econ&Biz 2026">
   <main class="bg-slate-50 font-sans text-slate-900 cursor-default py-12 min-h-screen">
     
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
       
-      <div class="border-b-2 border-blue-950 pb-4 mb-8 flex items-center justify-between">
-        <h1 class="text-xl md:text-2xl font-black text-blue-950 uppercase tracking-tight">
-          🎤 DIỄN GIẢ CHÍNH (KEYNOTE SPEAKERS)
-        </h1>
-        <span class="bg-orange-100 text-orange-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm hidden sm:inline-block">
-          Chuyên gia đầu ngành
-        </span>
-      </div>
+      <!-- PHẦN 1: DIỄN GIẢ CHÍNH (KEYNOTE SPEAKER) -->
+      <section>
+        <div class="border-b-2 border-blue-950 pb-4 mb-8 flex items-center justify-between">
+          <h1 class="text-xl md:text-2xl font-black text-blue-950 uppercase tracking-tight">
+            🎤 DIỄN GIẢ CHÍNH (KEYNOTE SPEAKER)
+          </h1>
+          <span class="bg-orange-100 text-orange-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm hidden sm:inline-block">
+            Chuyên gia đầu ngành
+          </span>
+        </div>
 
-      <div class="space-y-4">
-        {keynoteSpeakers.map((speaker, index) => (
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:border-blue-400 hover:shadow-md transition-all duration-300 group">
-            
-            <div class="w-24 h-24 rounded-full overflow-hidden bg-slate-100 border-2 border-slate-200 shrink-0 shadow-sm group-hover:border-blue-500 transition-colors">
-              <img 
-                src={speaker.image} 
-                alt={speaker.name} 
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200';" 
-              />
+        <div class="space-y-4">
+          {keynoteSpeakers.map((speaker) => (
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:border-blue-400 hover:shadow-md transition-all duration-300 group">
+              
+              <div class="w-28 h-28 rounded-full overflow-hidden bg-slate-100 border-2 border-slate-200 shrink-0 shadow-sm group-hover:border-blue-500 transition-colors">
+                <img 
+                  src={speaker.image} 
+                  alt={speaker.name} 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200';" 
+                />
+              </div>
+
+              <div class="flex-1 text-center sm:text-left space-y-2">
+                <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+                  <h2 class="text-lg font-extrabold text-slate-800 group-hover:text-blue-950 transition-colors">
+                    {speaker.name}
+                  </h2>
+                  <span class="text-slate-300 hidden sm:inline">|</span>
+                  <p class="text-xs font-bold text-blue-600 italic">
+                    {speaker.institution}
+                  </p>
+                </div>
+                
+                <div class="pt-2 flex flex-col sm:flex-row items-center sm:items-start gap-2 justify-center sm:justify-start">
+                  <span class="whitespace-nowrap text-[10px] font-bold text-orange-600 bg-orange-50 px-2.5 py-1 rounded uppercase tracking-wider shrink-0 mt-0.5 border border-orange-100">
+                    Chủ đề bài luận
+                  </span>
+                  <p class="text-xs font-semibold text-slate-600 leading-relaxed text-justify md:text-left">
+                    "{speaker.topic}"
+                  </p>
+                </div>
+              </div>
+
             </div>
+          ))}
+        </div>
+      </section>
 
-            <div class="flex-1 text-center sm:text-left space-y-2">
-              <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
-                <h2 class="text-base font-extrabold text-slate-800 group-hover:text-blue-950 transition-colors">
-                  {speaker.name}
-                </h2>
-                <span class="text-slate-300 hidden sm:inline">|</span>
-                <p class="text-xs font-bold text-blue-600 italic">
+      <!-- PHẦN 2: THẢO LUẬN BÀN TRÒN (PANEL DISCUSSION) -->
+      <section>
+        <div class="border-b-2 border-slate-900 pb-4 mb-8 flex items-center justify-between">
+          <h2 class="text-xl md:text-2xl font-black text-slate-900 uppercase tracking-tight">
+            🎙️ THẢO LUẬN BÀN TRÒN (PANEL DISCUSSION)
+          </h2>
+          <span class="bg-blue-100 text-blue-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm hidden sm:inline-block">
+            Tọa đàm chuyên sâu
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {panelSpeakers.map((speaker) => (
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4 hover:border-slate-900 hover:shadow-md transition-all duration-300 group">
+              
+              <div class="w-16 h-16 rounded-full overflow-hidden bg-slate-100 border border-slate-200 shrink-0 shadow-inner group-hover:border-slate-800 transition-colors">
+                <img 
+                  src={speaker.image} 
+                  alt={speaker.name} 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200';" 
+                />
+              </div>
+
+              <div class="flex-1 min-w-0 space-y-1">
+                <div class="flex items-center justify-between gap-2">
+                  <h3 class="text-sm font-extrabold text-slate-900 group-hover:text-blue-950 truncate transition-colors">
+                    {speaker.name}
+                  </h3>
+                  <span class="text-[9px] font-bold px-2 py-0.5 bg-slate-100 text-slate-700 rounded-md border border-slate-200 shrink-0">
+                    {speaker.role}
+                  </span>
+                </div>
+                <p class="text-xs font-medium text-slate-500 truncate">
                   {speaker.institution}
                 </p>
               </div>
-              
-              <div class="pt-2 flex flex-col sm:flex-row items-center sm:items-start gap-2 justify-center sm:justify-start">
-                <span class="whitespace-nowrap text-[10px] font-bold text-orange-600 bg-orange-50 px-2.5 py-1 rounded uppercase tracking-wider shrink-0 mt-0.5 border border-orange-100">
-                  Chủ đề bài luận
-                </span>
-                <p class="text-xs font-semibold text-slate-600 leading-relaxed text-justify md:text-left">
-                  "{speaker.topic}"
-                </p>
-              </div>
-            </div>
 
-          </div>
-        ))}
-      </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
     </div>
     
